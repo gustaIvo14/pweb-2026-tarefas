@@ -8,5 +8,8 @@ def index(request):
     return render(request, "index.html")
 
 def post(request, id_post):
-    context = {}
+    context = {
+        "post": Post.objects.get(id=id_post),
+        "post": get_object_or_404(Post, id=id_post)
+    }
     return render (request, "blog/post.html")

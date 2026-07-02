@@ -1,6 +1,10 @@
 extends blog/base.html
-block "title" inicio endblock
+block "title" post.titulo endblock
 block content
-<h2>Meus posts</h2>
-<p>o conteudo do meu post</p>
+<h2>{{ post.titulo }}</h2>
+<h4> postado em: {{post.data}}</h4>
+if post imagem
+<img src="{{post.imagem.url}}" alt="foto">
+endif
+<p>{{ post.texto | safe }}</p>
 endblock
