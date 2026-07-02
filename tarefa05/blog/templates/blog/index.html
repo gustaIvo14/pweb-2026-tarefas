@@ -3,3 +3,8 @@ block "title" inicio endblock
 block content
 <h2>Meus posts</h2>
 endblock
+<ul>
+    for post in posts
+    <li>{{ pos.titulo }} - {{ post.data }}</li>
+    endfor
+</ul>
