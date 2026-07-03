@@ -1,0 +1,11 @@
+{% extends "app/base.html" %}
+{% block "title"%}Início{% endblock %}
+{% block "content" %}
+<h3>Listas:</h3>
+{% for tarefa in tarefas %}
+    <p>Nome: {{tarefa.nome }}</p>
+    <p>Status: {{tarefa.status }}</p>
+    <p>Prazo: {{tarefa.prazo }}</p>
+    <br>
+{% endfor %}
+{% endblock %}
